@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Winter Sweatshirt</title>
+  <style type="text/css">
+  *{
+    margin: 0;
+    padding: 0;
+  }
+    .header{
+      height: 10vh;
+      width: 100vw;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #222;
+      color: #fff;
+    }
+    .menu h1{
+      position: relative;
+      font-size: 30px;
+      font-family: sans-serif;
+      letter-spacing: 3px;
+    }
+    
+    .logo h1{
+      font-size: 46px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .btns i{
+      font-size: 22px;
+      
+    }
+    .container {
+      height: 90vh;
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #F7F4ED;/* F7F4ED */
+    }
+
+    .swiper {
+      height: 90vh;
+      width: 100%;
+      cursor: hand;
+    }
+
+    .swiper-slide-img {
+      height: 90vh;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      cursor: pointer;
+    }
+  </style>
+    <!----- link of swiper slider ------>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <!---×××××××××××××××××××××××××××××××××××××--->
+
+  <!------- script src for swiper -------->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <!------- header sec with search box ------>
+
+  <section class="header" id="header">
+
+    <!----- navbar or menubar ------>
+
+    <!--<nav class="nav_container">
+
+      
+
+      
+      
+      
+      <div class="menu_bar" id="menu_bar">
+        <ul class="nav_links_list" id="nav_list">
+          
+          
+          <li class="nav_links">
+            <a href="#">HOME</a>
+          </li>
+          <li class="nav_links">
+            <a href="#">HOME</a>
+          </li>
+          <li class="nav_links">
+            <a href="#">HOME</a>
+          </li>
+         </ul>
+      </div>
+      
+     </nav>-->
+     <div class="menu">
+       <h1>MENU</h1>
+     </div>
+      <div class="logo">
+        <h1>BRANDIZ</h1>
+      </div>
+      <div class="btns">
+        <i class="fa-solid fa-magnifying-glass"></i>  
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+  </section>
+  <section class="main">
+    <div class="container">
+
+    <!------- Slider main container ------->
+    <div class="swiper">
+      <!---- Additional required wrapper ---->
+      <div class="swiper-wrapper" id="swiper_Wrapper">
+        <!--------- Slides ----------->
+        <div class="swiper-slide" id="swiper_slide1">
+          <img src="a.png" alt="" />
+        </div>
+        <div class="swiper-slide" id="swiper_slide2">
+          <img src="b.png" alt="" />
+        </div>
+        <div class="swiper-slide" id="swiper_slide3">
+          <img src="c.png" alt="" />
+        </div>
+        
+      </div>
+      <!------- If we need pagination -------->
+      <div class="swiper-pagination"></div>
+      <!---- If we need navigation buttons ---->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+    </div>
+
+    </div>
+    <div class="product_dis">
+      <p>New Brandiz fancy aesthetic winter jackat</p>
+      <h1 class="price">RS. 5699</h1>
+    </div>
+  </section>
+    <!--- swiper slides timer settings --->
+  <script>
+    
+    const swiper = new Swiper('.swiper', {
+  
+      autoplay: {
+        delay: 5500,
+        disableOnIteraction: false,
+      },
+      loop: true,
+  
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+  
+  
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+  
+    });
+  
+  </script>
+</body>
+
+</html>
