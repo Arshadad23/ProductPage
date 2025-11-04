@@ -1,174 +1,212 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Winter Sweatshirt</title>
-  <style type="text/css">
-  *{
-    margin: 0;
-    padding: 0;
-  }
-    .header{
-      height: 10vh;
-      width: 100vw;
-      position: relative;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Six - Product Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* === Product Section (Previous Code Context) === */
+    .product-section {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #222;
-      color: #fff;
+      padding: 40px 80px;
+      border-bottom: 1px solid #e5e5e5;
     }
-    .menu h1{
+
+    .product-images {
+      flex: 1;
+      text-align: center;
       position: relative;
-      font-size: 30px;
-      font-family: sans-serif;
-      letter-spacing: 3px;
     }
-    
-    .logo h1{
-      font-size: 46px;
-      font-family: 'Times New Roman', Times, serif;
+
+    .product-images img {
+      width: 80%;
+      border-radius: 8px;
     }
-    .btns i{
+
+    .product-details {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .price {
       font-size: 22px;
-      
-    }
-    .container {
-      height: 90vh;
-      width: 100%;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #F7F4ED;/* F7F4ED */
+      font-weight: 600;
+      margin-bottom: 10px;
     }
 
-    .swiper {
-      height: 90vh;
-      width: 100%;
-      cursor: hand;
+    .view-size-chart {
+      display: inline-block;
+      color: #333;
+      font-size: 14px;
+      cursor: pointer;
+      margin-bottom: 15px;
     }
 
-    .swiper-slide-img {
-      height: 90vh;
-      width: 100%;
-      background-size: cover;
-      background-position: center;
-      position: relative;
+    .sizes button {
+      border: 1px solid #000;
+      background: #fff;
+      color: #000;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
       cursor: pointer;
     }
+
+    .add-to-cart {
+      width: 100%;
+      border: 1px solid #000;
+      border-radius: 40px;
+      padding: 15px;
+      background: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    /* === Popup Modal === */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content img {
+      width: 60%;
+      border-radius: 10px;
+    }
+
+    /* === Care Instructions Dropdown === */
+    .care {
+      margin-top: 20px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .care img {
+      width: 200px;
+      margin-top: 10px;
+      display: none;
+    }
+
+    /* === "You May Also Like" Section === */
+    .recommend-section {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 60px 80px;
+    }
+
+    .recommend-title {
+      flex: 1;
+      font-size: 36px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .recommend-products {
+      flex: 2;
+      display: flex;
+      gap: 40px;
+    }
+
+    .product-card {
+      text-align: center;
+      width: 200px;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card img:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card p {
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 500;
+    }
   </style>
-    <!----- link of swiper slider ------>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-  <!---×××××××××××××××××××××××××××××××××××××--->
-
-  <!------- script src for swiper -------->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
-
 <body>
-  <!------- header sec with search box ------>
-
-  <section class="header" id="header">
-
-    <!----- navbar or menubar ------>
-
-    <!--<nav class="nav_container">
-
-      
-
-      
-      
-      
-      <div class="menu_bar" id="menu_bar">
-        <ul class="nav_links_list" id="nav_list">
-          
-          
-          <li class="nav_links">
-            <a href="#">HOME</a>
-          </li>
-          <li class="nav_links">
-            <a href="#">HOME</a>
-          </li>
-          <li class="nav_links">
-            <a href="#">HOME</a>
-          </li>
-         </ul>
-      </div>
-      
-     </nav>-->
-     <div class="menu">
-       <h1>MENU</h1>
-     </div>
-      <div class="logo">
-        <h1>BRANDIZ</h1>
-      </div>
-      <div class="btns">
-        <i class="fa-solid fa-magnifying-glass"></i>  
-        <i class="fa-solid fa-cart-shopping"></i>
-      </div>
-  </section>
-  <section class="main">
-    <div class="container">
-
-    <!------- Slider main container ------->
-    <div class="swiper">
-      <!---- Additional required wrapper ---->
-      <div class="swiper-wrapper" id="swiper_Wrapper">
-        <!--------- Slides ----------->
-        <div class="swiper-slide" id="swiper_slide1">
-          <img src="a.png" alt="" />
-        </div>
-        <div class="swiper-slide" id="swiper_slide2">
-          <img src="b.png" alt="" />
-        </div>
-        <div class="swiper-slide" id="swiper_slide3">
-          <img src="c.png" alt="" />
-        </div>
-        
-      </div>
-      <!------- If we need pagination -------->
-      <div class="swiper-pagination"></div>
-      <!---- If we need navigation buttons ---->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
+  <!-- === Product Section === -->
+  <section class="product-section">
+    <div class="product-images">
+      <img src="https://i.imgur.com/DXt5ObB.png" alt="T-shirt" id="mainImage" />
     </div>
 
-    </div>
-    <div class="product_dis">
-      <p>New Brandiz fancy aesthetic winter jackat</p>
-      <h1 class="price">RS. 5699</h1>
+    <div class="product-details">
+      <div class="price">₹18,500.00</div>
+      <div class="view-size-chart" onclick="openModal()">🧵 View size chart</div>
+
+      <p>Select Size</p>
+      <div class="sizes">
+        <button>M</button>
+        <button>L</button>
+        <button>XL</button>
+      </div>
+
+      <button class="add-to-cart">ADD TO CART</button>
+
+      <div class="care" onclick="toggleCare()">
+        Care instructions +
+        <img src="https://i.imgur.com/7o5Fh6Z.png" alt="Care Instructions" id="careImg" />
+      </div>
     </div>
   </section>
-    <!--- swiper slides timer settings --->
+
+  <!-- === "You May Also Like" Section === -->
+  <section class="recommend-section">
+    <div class="recommend-title">You may also like</div>
+    <div class="recommend-products">
+      <div class="product-card">
+        <img src="https://i.imgur.com/lvQeJcD.png" alt="Longsleeve Grey/Yellow" />
+        <p>Longsleeve TSCS grey/yellow</p>
+      </div>
+      <div class="product-card">
+        <img src="https://i.imgur.com/B6Hb7Az.png" alt="Hoodie Dark Grey" />
+        <p>Zip Hoodie TSCS dark grey</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Popup Modal === -->
+  <div class="modal" id="sizeChartModal">
+    <div class="modal-content" onclick="closeModal()">
+      <img src="https://i.imgur.com/7o5Fh6Z.png" alt="Size Chart" />
+    </div>
+  </div>
+
   <script>
-    
-    const swiper = new Swiper('.swiper', {
-  
-      autoplay: {
-        delay: 5500,
-        disableOnIteraction: false,
-      },
-      loop: true,
-  
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-  
-  
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-  
-    });
-  
+    function openModal() {
+      document.getElementById("sizeChartModal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("sizeChartModal").style.display = "none";
+    }
+
+    function toggleCare() {
+      const img = document.getElementById("careImg");
+      img.style.display = img.style.display === "block" ? "none" : "block";
+    }
   </script>
 </body>
-
 </html>
